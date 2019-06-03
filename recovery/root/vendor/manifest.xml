@@ -264,6 +264,18 @@
         <fqname>@1.0::IRadioConfig/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.secure_element</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISecureElement</name>
+            <instance>SIM1</instance>
+            <instance>SIM2</instance>
+        </interface>
+        <fqname>@1.0::ISecureElement/SIM1</fqname>
+        <fqname>@1.0::ISecureElement/SIM2</fqname>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.sensors</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -326,12 +338,12 @@
     <hal format="hidl">
         <name>android.hardware.vibrator</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.2</version>
         <interface>
             <name>IVibrator</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IVibrator/default</fqname>
+        <fqname>@1.2::IVibrator/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.wifi</name>
@@ -429,6 +441,16 @@
         <fqname>@1.0::IHDCPSession/wifidisplayhdcphal</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.asus.motor</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IRotateCameraInterface</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IRotateCameraInterface/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.display.color</name>
         <transport>hwbinder</transport>
         <version>1.2</version>
@@ -459,154 +481,39 @@
         <fqname>@1.0::IDisplayPostproc/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.dolby.hardware.dms</name>
+        <name>vendor.goodix.hardware.biometrics.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>2.1</version>
+        <interface>
+            <name>IGoodixFingerprintDaemon</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IGoodixFingerprintDaemonExt</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.1::IGoodixFingerprintDaemon/default</fqname>
+        <fqname>@2.1::IGoodixFingerprintDaemonExt/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.nxp.hardware.nfc</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IDms</name>
+            <name>INqNfc</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IDms/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.nxp.nxpnfc</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>INxpNfc</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::INxpNfc/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.camera.CameraHIDL</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOnePlusCameraProvider</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IOnePlusCameraProvider/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.engnative.engineer</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IEngineer</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IEngineer/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.faceunlock.hal</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IFaceUnlockNativeService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IFaceUnlockNativeService/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.fingerprint.extension</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IVendorFingerprintExtensions</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IVendorFingerprintExtensions/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.hardware.display</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOneplusDisplay</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IOneplusDisplay/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.hardware.drmkey</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOneplusDrmKey</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IOneplusDrmKey/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.hardware.hdcpkey</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOneplusHdcpKey</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IOneplusHdcpKey/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.hardware.ifaa</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IOneplusIfaa</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::IOneplusIfaa/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.hardware.motorcontrol</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOPMotorControl</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IOPMotorControl/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.hardware.param</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOneplusParam</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IOneplusParam/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.hardware.rpmb</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOneplusRpmb</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IOneplusRpmb/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.hardware.wifi</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>IOneplusWifi</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::IOneplusWifi/default</fqname>
+        <fqname>@1.0::INqNfc/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
-        <version>1.1</version>
+        <version>1.0</version>
         <interface>
             <name>IFactory</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.1::IFactory/default</fqname>
+        <fqname>@1.0::IFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.esepowermanager</name>
@@ -844,31 +751,6 @@
         <fqname>@1.0::IUimRemoteServiceServer/uimRemoteServer1</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.scve.objecttracker</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IObjectTracker</name>
-            <instance>objectTracker</instance>
-        </interface>
-        <fqname>@1.0::IObjectTracker/objectTracker</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.scve.panorama</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IPanoramaStitching</name>
-            <instance>panoStitching</instance>
-        </interface>
-        <interface>
-            <name>IPanoramaTracking</name>
-            <instance>panoTracking</instance>
-        </interface>
-        <fqname>@1.0::IPanoramaStitching/panoStitching</fqname>
-        <fqname>@1.0::IPanoramaTracking/panoTracking</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.sensorscalibrate</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -939,6 +821,26 @@
         <fqname>@1.0::IWifiStats/wifiStats</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.wigig.netperftuner</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>INetPerfTuner</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::INetPerfTuner/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.wigig.supptunnel</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISuppTunnelProvider</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ISuppTunnelProvider/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.ims.callinfo</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -957,6 +859,16 @@
             <instance>imsrtpservice</instance>
         </interface>
         <fqname>@1.0::IRTPService/imsrtpservice</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.power.pasrmanager</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IPasrManager</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IPasrManager/default</fqname>
     </hal>
     <sepolicy>
         <version>28.0</version>

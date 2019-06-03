@@ -15,7 +15,7 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := guacamole
+PRODUCT_RELEASE_NAME := I01WD
 
 $(call inherit-product, build/target/product/embedded.mk)
 
@@ -23,19 +23,19 @@ $(call inherit-product, build/target/product/embedded.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/oneplus/guacamole/device.mk)
+$(call inherit-product, device/asus/I01WD/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := guacamole
-PRODUCT_NAME := omni_guacamole
-PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := OnePlus GM1917
-PRODUCT_MANUFACTURER := OnePlus
+PRODUCT_DEVICE := I01WD
+PRODUCT_NAME := omni_I01WD
+PRODUCT_BRAND := asus
+PRODUCT_MODEL := ASUS_I01WD
+PRODUCT_MANUFACTURER := asus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=OnePlus7Pro \
-    BUILD_PRODUCT=OnePlus7Pro \
-    TARGET_DEVICE=OnePlus7Pro
+    PRODUCT_NAME=WW_I01WD \
+    BUILD_PRODUCT=ZS630KL \
+    TARGET_DEVICE=ASUS_I01WD
 
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \

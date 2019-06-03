@@ -1,6 +1,6 @@
-# Device Tree for OnePlus 7 Pro (guacamole)
+# Device Tree for ASUS ZenFone6 (I01WD)
 
-The OnePlus 7 Pro (codenamed _"guacamole"_) is a flagship smartphone from OnePlus.
+The ASUS ZenFone6 (codenamed _"I01WD"_) is a flagship smartphone from ASUS.
 It was released in May 2019.
 
 
@@ -22,7 +22,7 @@ Then add these string to .repo/manifests/remove.xml
 Then add these projects to .repo/local_manifests/roomservice.xml (If you don't have it, you can add them to .repo/manifest.xml): 
 
 ```xml
-<project name="mauronofrio/android_device_oneplus_guacamole_TWRP" path="device/oneplus/guacamole" remote="github" revision="android-9.0" />
+<project name="x86cpu/android_device_asus_I01WD_TWRP" path="device/asus/I01WD" remote="github" revision="android-9.0" />
 <project name="mauronofrio/android_bootable_recovery" path="bootable/recovery" remote="github" revision="android-9.0" />
 <project name="android_external_busybox" path="external/busybox" remote="TeamWin" revision="android-9.0" />
 ```
@@ -51,16 +51,16 @@ Finally execute these:
 . build/envsetup.sh
 export ALLOW_MISSING_DEPENDENCIES=true
 export LC_ALL=C
-lunch omni_guacamole-eng 
+lunch omni_I01WD-eng
 mka adbd recoveryimage 
 ```
 
 To test it:
 
 ```
-fastboot boot out/target/product/guacamole/recovery.img
+fastboot boot out/target/product/I01WD/recovery.img
 ```
 
 Kernel Source: using precompiled kernel
 ## Credits
-I want to say a big thanks to @twinnfamous
+I want to say a big thanks to @mauronofrio
